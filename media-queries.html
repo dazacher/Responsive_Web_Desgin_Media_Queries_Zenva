@@ -1,36 +1,87 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-      <style>
-         /* Smart phone styling */
-         * {
-            margin: 0;
-         }
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+   <style>
+      /* Smart phone styling - applies to EVERYTHING unless overridden elsewhere*/
+      * {
+         margin: 0;
+      }
+
+      body {
+         background: rgba(255, 0, 0, .25);
+      }
+
+      header {
+         background-color: rgba(0, 0, 0, .25);
+         margin-bottom: 10px;
+         height: 50px;
+      }
+
+      aside {
+         background-color: rgba(0, 0, 0, .25);
+         margin-bottom: 10px;
+         height: 1000px;
+         display: none;
+      }
+
+      section {
+         background-color: rgba(0, 0, 0, .25);
+         margin-bottom: 10px;
+         height: 1000px;
+      }
+
+      footer {
+         background-color: rgba(0, 0, 0, .25);
+         height: 25px;
+      }
+
+      /* Any device that has a minimum screen width of 768px and wider*/
+      @media screen and (min-width: 768px) {
          body {
-            background: rgba(255, 0, 0, .25);
-         }
-
-         /* Any device that has a minimum width of 768px */
-         @media screen and (min-width: 768px){
-            body {
             background: rgba(0, 255, 0, .25);
-            }
          }
 
-         /* Any device that has a minimu width of 1200px */
-         @media screen and (min-width: 1200px){
+         aside {
+            display: block;
+         }
+      }
+
+      /* Any device that has a minimum screen width of 1200px and wider */
+      @media screen and (min-width: 1200px) {
          body {
-         background: rgba(0, 0, 255, .25);
+            background: rgba(0, 0, 255, .25);
          }
-         }
-      </style>
-      <title>CSS Media Queries</title>
-   </head>
-   <body>
 
-   </body>
+         section {
+            float: left;
+            width: 69%;
+            margin-right: 10px;
+         }
+
+         aside {
+            float: right;
+            width: 30%;
+         }
+
+         footer {
+            clear: both;
+         }
+      }
+   </style>
+   <title>CSS Media Queries</title>
+</head>
+
+<body>
+
+   <header>Header</header>
+   <section>Section</section>
+   <aside>Aside</aside>
+   <footer>Footer</footer>
+
+</body>
+
 </html>
